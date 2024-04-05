@@ -6,4 +6,6 @@ requests == 2.31.0
 sklearn-crfsuite == 0.3.6
 
 # 0.18 is need for GroupKFold
-scikit-learn == 1.4.0
+# pin version of scikit-learn because the version above 1.2.0 create issues with formasaurus init. \
+# We have to check after some time if the issue is fixed.
+scikit-learn == 1.1.3
