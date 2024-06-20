@@ -35,7 +35,7 @@ setup(
         'six',
         'requests == 2.31.0',
         'sklearn-crfsuite == 0.3.6',
-        'scikit-learn == 1.1.3',
+        'scikit-learn == 1.5.0',
         'w3lib >= 1.13.0',
         'numpy == 1.26.4',
     ],
