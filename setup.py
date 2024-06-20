@@ -14,7 +14,6 @@ with_deps_extras = [
     'lxml==4.6.5',
     'sklearn-crfsuite>=0.3.1',
     'joblib',
-    'numpy==1.21.6',  # Pin numpy version to ensure compatibility
 ]
 
 setup(
@@ -38,6 +37,7 @@ setup(
         'sklearn-crfsuite == 0.3.6',
         'scikit-learn == 1.1.3',
         'w3lib >= 1.13.0',
+        'numpy == 1.26.4',
     ],
     package_data={
         'formasaurus': [

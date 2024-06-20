@@ -5,6 +5,10 @@ tldextract == 5.1.2
 requests == 2.31.0
 sklearn-crfsuite == 0.3.6
 
+# Currently this is the version that it is compatible and doesn't break anything
+# todo: Check for any new version that fixes bugs with compatibility
+numpy == 1.26.4
+
 # 0.18 is need for GroupKFold
 # pin version of scikit-learn because the version above 1.2.0 create issues with formasaurus init. \
 # We have to check after some time if the issue is fixed.
