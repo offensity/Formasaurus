@@ -9,7 +9,5 @@ sklearn-crfsuite == 0.3.6
 # todo: Check for any new version that fixes bugs with compatibility
 numpy == 1.26.4
 
-# 0.18 is need for GroupKFold
-# pin version of scikit-learn because the version above 1.2.0 create issues with formasaurus init. \
-# We have to check after some time if the issue is fixed.
-scikit-learn == 1.1.3
+# 0.18 is need for GroupKFold:
+scikit-learn == 1.5.0
