@@ -3,18 +3,16 @@ from setuptools import setup
 import re
 import os
 
-
 def get_version():
     fn = os.path.join(os.path.dirname(__file__), "formasaurus", "__init__.py")
     with open(fn) as f:
         return re.findall("__version__ = '([\d\.\w]+)'", f.read())[0]
 
-
 with_deps_extras = [
-    'scikit-learn >= 0.18',
+    'scikit-learn>=0.18',
     'scipy',
-    'lxml',
-    'sklearn-crfsuite >= 0.3.1',
+    'lxml==4.6.5',
+    'sklearn-crfsuite>=0.3.1',
     'joblib',
 ]
 
@@ -30,12 +28,16 @@ setup(
     zip_safe=False,
     packages=['formasaurus'],
     install_requires=[
-        "tqdm >= 2.0",
-        "tldextract",
-        "docopt",
-        "six",
-        "requests",
-        "w3lib >= 1.13.0",
+        'lxml == 5.1.1',
+        'docopt == 0.6.2',
+        'tqdm == 4.66.2',
+        'tldextract == 5.1.2',
+        'six',
+        'requests == 2.31.0',
+        'sklearn-crfsuite == 0.3.6',
+        'scikit-learn == 1.1.3',
+        'w3lib >= 1.13.0',
+        'numpy == 1.26.4',
     ],
     package_data={
         'formasaurus': [
@@ -44,11 +46,9 @@ setup(
         ],
     },
     extras_require={
-        # Work around https://github.com/pypa/pip/issues/3032
         'with-deps': with_deps_extras,
-        'with_deps': with_deps_extras,
         'annotation': [
-            'ipython[notebook] >= 4.0',
+            'ipython[notebook]>=4.0',
             'ipywidgets',
             'Tornado>=4.0.0',
         ],
@@ -56,7 +56,6 @@ setup(
     entry_points={
         'console_scripts': ['formasaurus = formasaurus.__main__:main']
     },
-
     classifiers=[
         'Development Status :: 4 - Beta',
         'License :: OSI Approved :: MIT License',
